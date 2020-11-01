@@ -1,0 +1,19 @@
+{
+  "name": "@2mofcode/rollup-wrapper",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Kássio Maia <kassio.maia@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "build": "rollup -c"
+  },
+  "dependencies": {
+    "chalk": "^4.1.0",
+    "rollup": "^2.32.1",
+    "rollup-plugin-babel": "^4.4.0",
+    "rollup-plugin-terser": "^7.0.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.3"
+  }
+}
