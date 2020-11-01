@@ -1,10 +1,9 @@
 {
-  "name": "@2mofcode/rollup-wrapper",
-  "version": "1.0.0",
+  "name": "rollup-wrapper",
+  "version": "1.0.1",
   "main": "index.js",
   "author": "Kássio Maia <kassio.maia@gmail.com>",
   "license": "MIT",
-  "private": "false",
   "scripts": {
     "build": "rollup -c"
   },
