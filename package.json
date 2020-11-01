@@ -4,6 +4,7 @@
   "main": "index.js",
   "author": "Kássio Maia <kassio.maia@gmail.com>",
   "license": "MIT",
+  "private": "false",
   "scripts": {
     "build": "rollup -c"
   },
