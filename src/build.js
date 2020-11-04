@@ -1,6 +1,9 @@
-/*
+/**
+ * /*
  * This file is subject to the terms and conditions defined in
  * file 'LICENSE.md', which is part of this source code package.
+ *
+ * @format
  */
 
 /** @format */
@@ -8,8 +11,6 @@
 import rollup from 'rollup'
 import babel from 'rollup-plugin-babel'
 import { terser } from 'rollup-plugin-terser'
-
-import chalk from 'chalk'
 
 import bundleTypes from './bundleTypes.js'
 import { getFilename, getFormat } from './bundleUtils.js'
@@ -28,30 +29,30 @@ const {
 
 export function getInputPlugins(bundleType) {
   switch (bundleType) {
-    case UMD_DEVELOPMENT:
-    case NODE_DEVELOPMENT:
-    case UMD_PRODUCTION:
-    case NODE_PRODUCTION:
-    case UMD_PROFILING:
-    case NODE_PROFILING:
-      return [babel()]
-    default:
-      break
+  case UMD_DEVELOPMENT:
+  case NODE_DEVELOPMENT:
+  case UMD_PRODUCTION:
+  case NODE_PRODUCTION:
+  case UMD_PROFILING:
+  case NODE_PROFILING:
+    return [babel()]
+  default:
+    break
   }
 }
 
 export function getOutputPlugins(bundleType) {
   switch (bundleType) {
-    case UMD_DEVELOPMENT:
-    case NODE_DEVELOPMENT:
-    case UMD_PROFILING:
-    case NODE_PROFILING:
-      return []
-    case UMD_PRODUCTION:
-    case NODE_PRODUCTION:
-      return [terser()]
-    default:
-      break
+  case UMD_DEVELOPMENT:
+  case NODE_DEVELOPMENT:
+  case UMD_PROFILING:
+  case NODE_PROFILING:
+    return []
+  case UMD_PRODUCTION:
+  case NODE_PRODUCTION:
+    return [terser()]
+  default:
+    break
   }
 }
 

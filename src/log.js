@@ -30,6 +30,6 @@ export function completeBuildPhase(name, file, format) {
   )
 }
 
-export function failBuildPhase(err, format) {
+export function failBuildPhase(err, file) {
   console.log(`${block.error('  FAILED  ')} ${text.error(err)}: ${file}`)
 }
